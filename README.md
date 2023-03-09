@@ -5,6 +5,10 @@ It contains a frontend and a backend, with some very basic interaction
 between them. Feel free to modify whatever you wish, or to start 
 completely from scratch! :smiley_cat:
 
+# Implementation
+
+CatWiki display a list of cat's breed where you can select to display a list of pictures of the breed. 
+
 ## Starting the backend
 
 To start up the backend Node.js server, run the following command in your
