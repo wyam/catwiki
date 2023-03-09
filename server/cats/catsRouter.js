@@ -12,7 +12,17 @@ catsRouter.get('/filter',
         }
         const cats = await catsService.getCatsByBreed(req.query.breed);
         if (cats) {
-            return res.send(cats);
+            return res.json(cats);
+        }
+        return res.status(500).json({message: 'Internal error'});
+    }
+);
+
+catsRouter.get('/breeds',
+    async (req, res) => {
+        const catsBreeds = await catsService.getBreeds();
+        if (catsBreeds) {
+            return res.json(catsBreeds);
         }
         return res.status(500).json({message: 'Internal error'});
     }

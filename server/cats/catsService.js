@@ -7,6 +7,14 @@ const getCatsByBreed = async (breed) => {
     }
 };
 
+const getBreeds = async () => {
+    const catsBreeds = await thecatapi.getBreeds();
+    if (catsBreeds) {
+        return catsBreeds.map(cat => ({ id: cat.id, label: cat.name }));
+    }
+}
+
 module.exports = {
-    getCatsByBreed
+    getCatsByBreed,
+    getBreeds
 };

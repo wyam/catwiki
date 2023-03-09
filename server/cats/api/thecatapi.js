@@ -7,6 +7,11 @@ const thecatapi = {
         return axios.get(`${API_HOST}/images/search?limit=10${breed ? '&breed_ids=' + breed : '' }`)
             .then(res => res.data)
             .catch(err => console.log('Error: ', err.message));
+    },
+    getBreeds: () => {
+        return axios.get(`${API_HOST}/breeds`)
+            .then(res => res.data)
+            .catch(err => console.log('Error: ', err.message));
     }
 };
 module.exports = {
