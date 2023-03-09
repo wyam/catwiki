@@ -22,6 +22,14 @@ curl localhost:3001/api
 {"message":"Hello from CatWiki!"}
 ```
 
+## Running backend tests
+
+From the `root` directory, run the following:
+
+```
+npm test
+```
+
 ## Starting the frontend
 
 Open a new tab, and run the following commands in your terminal:
