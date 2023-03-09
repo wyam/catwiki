@@ -4,8 +4,8 @@ const express = require("express");
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
-const env = process.env.NODE_ENV.toUpperCase();
-const PORT = process.env[`PORT_${env}`] || 3001;
+const env = process.env.NODE_ENV;
+const PORT = env === 'test' ? process.env[`PORT_${env}`] : process.env.PORT || 3001;
 
 const app = express();
 const cats = require('./cats/catsRouter')
