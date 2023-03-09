@@ -1,0 +1,16 @@
+.catsImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: white;
+    opacity: 0.8;
+    min-height: inherit;
+    margin: 25px;
+    width: 800px;
+}
+
+.catsImages h2 {
+    font-family: fantasy;
+    font-weight: bold;
+}

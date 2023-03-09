@@ -1,0 +1,16 @@
+.headerSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-image: url("/public/catBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+
+.breedInput {
+    border-radius: 10px;
+    margin-left: 50px;
+    background-color: white;
+}
