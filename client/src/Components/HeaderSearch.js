@@ -1,5 +1,5 @@
 import React from "react";
-
+import config from "../config.json";
 import "./HeaderSearch.css";
 
 import TextField from '@mui/material/TextField';
@@ -15,14 +15,14 @@ function HeaderSearch() {
     function fetchCatsImagesByBreed (event, newBreed) {
         if (newBreed) {
             setSelectedBreed(newBreed.label);
-            fetch(`/api/v1/cats/filter?breed=${newBreed.id}`)
+            fetch(`${config.apiHost}/api/v1/cats/filter?breed=${newBreed.id}`)
                 .then((res) => res.json())
                 .then((data) => setCats(data));
         }
     }
 
     React.useEffect(() => {
-        fetch("/api/v1/cats/breeds")
+        fetch(`${config.apiHost}/api/v1/cats/breeds`)
             .then((res) => res.json())
             .then((data) => setBreeds(data));
     }, []);
